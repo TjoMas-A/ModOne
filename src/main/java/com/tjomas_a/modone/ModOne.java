@@ -1,5 +1,6 @@
 package com.tjomas_a.modone;
 
+import com.tjomas_a.modone.configuration.ConfigurationHandler;
 import com.tjomas_a.modone.proxy.IProxy;
 import com.tjomas_a.modone.reference.Reference;
 import cpw.mods.fml.common.Mod;
@@ -20,7 +21,7 @@ public class ModOne
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent event)
     {
-        
+        ConfigurationHandler.init(event.getSuggestedConfigurationFile());
     }
 
     @Mod.EventHandler
