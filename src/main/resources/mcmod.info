@@ -1,0 +1,21 @@
+[
+{
+  "modid": "ModOne",
+  "name": "Mod One",
+  "description": "Third (really?) attampt at following Pahimar's Let's Mod Reboot series.",
+  "version": "1.0",
+  "mcversion": "1.7.10",
+  "url": "",
+  "updateUrl": "",
+  "authorList": [
+    "TjoMas_A
+  ],
+  "credits": "People who helped out? Definetly Pahimar for doing the series.",
+  "logoFile": "",
+  "screenshots": [
+  ],
+  "parent":"",
+  "dependencies": [
+  ]
+}
+]
