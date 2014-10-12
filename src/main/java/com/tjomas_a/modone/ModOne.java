@@ -1,6 +1,7 @@
 package com.tjomas_a.modone;
 
 import com.tjomas_a.modone.handler.ConfigurationHandler;
+import com.tjomas_a.modone.init.ModBlocks;
 import com.tjomas_a.modone.init.ModItems;
 import com.tjomas_a.modone.proxy.IProxy;
 import com.tjomas_a.modone.reference.Reference;
@@ -27,6 +28,7 @@ public class ModOne
         ConfigurationHandler.init(event.getSuggestedConfigurationFile());
         FMLCommonHandler.instance().bus().register(new ConfigurationHandler());
         ModItems.init();
+        ModBlocks.init();
         LogHelper.info("Pre-Init Complete");
     }
 

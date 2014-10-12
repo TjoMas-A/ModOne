@@ -22,7 +22,7 @@ group= "com.TjoMas_A.ModOne" // http://maven.apache.org/guides/mini/guide-naming
 archivesBaseName = "ModOne"
 
 minecraft {
-    version = "1.7.10-10.13.1.1217"
+    version = "1.7.10-10.13.1.1225"
     runDir = "eclipse/assets"
 }
 

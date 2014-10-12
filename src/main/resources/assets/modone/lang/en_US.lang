@@ -1,3 +1,7 @@
 # Item Localisation
 
 item.modone:flag.name=Flag
+
+# Block Localisation
+
+tile.modone:healingStation.name=Healing Station
