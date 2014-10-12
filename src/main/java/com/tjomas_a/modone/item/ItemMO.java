@@ -1,5 +1,6 @@
 package com.tjomas_a.modone.item;
 
+import com.tjomas_a.modone.creativetab.CreativeTabMO;
 import com.tjomas_a.modone.reference.Reference;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -12,6 +13,7 @@ public class ItemMO extends Item
     public ItemMO()
     {
         super();
+        this.setCreativeTab(CreativeTabMO.MO_TAB);
     }
 
     @Override

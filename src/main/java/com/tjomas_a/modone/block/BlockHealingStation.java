@@ -1,5 +1,7 @@
 package com.tjomas_a.modone.block;
 
+import com.tjomas_a.modone.creativetab.CreativeTabMO;
+
 public class BlockHealingStation extends BlockMO
 {
     public BlockHealingStation()

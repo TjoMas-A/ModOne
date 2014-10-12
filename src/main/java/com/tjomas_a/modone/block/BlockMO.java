@@ -1,5 +1,6 @@
 package com.tjomas_a.modone.block;
 
+import com.tjomas_a.modone.creativetab.CreativeTabMO;
 import com.tjomas_a.modone.reference.Reference;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -12,6 +13,7 @@ public class BlockMO extends Block
     public BlockMO(Material material)
     {
         super(material);
+        this.setCreativeTab(CreativeTabMO.MO_TAB);
     }
 
     public BlockMO()
