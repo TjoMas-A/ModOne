@@ -3,6 +3,7 @@ package com.tjomas_a.modone;
 import com.tjomas_a.modone.handler.ConfigurationHandler;
 import com.tjomas_a.modone.init.ModBlocks;
 import com.tjomas_a.modone.init.ModItems;
+import com.tjomas_a.modone.init.Recipes;
 import com.tjomas_a.modone.proxy.IProxy;
 import com.tjomas_a.modone.reference.Reference;
 import com.tjomas_a.modone.utility.LogHelper;
@@ -35,6 +36,7 @@ public class ModOne
     @Mod.EventHandler
     public void init(FMLInitializationEvent event)
     {
+        Recipes.init();
         LogHelper.info("Init Complete");
     }
 
