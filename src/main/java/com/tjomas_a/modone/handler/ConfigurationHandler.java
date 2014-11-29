@@ -9,34 +9,38 @@ import net.minecraftforge.common.config.Configuration;
 
 public class ConfigurationHandler
 {
-    public static Configuration configuration;
-    public static boolean testValue = false;
+    public static Configuration config;
+
+    public static boolean testValue;
+    public static int novaculiteAmount;
 
     public static void init(File configFile)
     {
-        if(configuration == null)
+        if(config == null)
         {
-            configuration = new Configuration(configFile);
+            config = new Configuration(configFile);
             loadConfiguration();
         }
 
     }
+
+    private static void loadConfiguration()
+    {
+        testValue = config.get(Configuration.CATEGORY_GENERAL, "testValue", false, "Example config value").getBoolean(false);
+        novaculiteAmount = config.get(Configuration.CATEGORY_GENERAL, "novaculiteAmount", 7, "Amount of novaculite generating in the world; use 0 for none.").getInt(7);
+
+        if (config.hasChanged())
+        {
+            config.save();
+        }
+    }
+
     @SubscribeEvent
     public void onConfigurationChangedEvent (ConfigChangedEvent.OnConfigChangedEvent event)
     {
         if (event.modID.equalsIgnoreCase(Reference.MOD_ID))
         {
             loadConfiguration();
-        }
-    }
-
-    private static void loadConfiguration()
-    {
-        testValue = configuration.getBoolean("configValue", Configuration.CATEGORY_GENERAL, false, "Example config value");
-
-        if (configuration.hasChanged())
-        {
-            configuration.save();
         }
     }
 
