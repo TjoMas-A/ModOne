@@ -7,6 +7,7 @@ import com.tjomas_a.modone.init.Recipes;
 import com.tjomas_a.modone.proxy.IProxy;
 import com.tjomas_a.modone.reference.Reference;
 import com.tjomas_a.modone.utility.LogHelper;
+import com.tjomas_a.modone.world.WorldGenNova;
 import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.SidedProxy;

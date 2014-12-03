@@ -1,4 +1,4 @@
-package com.tjomas_a.modone;
+package com.tjomas_a.modone.world;
 
 import cpw.mods.fml.common.IWorldGenerator;
 import net.minecraft.block.Block;
