@@ -1,6 +1,10 @@
 package com.tjomas_a.modone.block;
 
 
+import com.tjomas_a.modone.tileentity.ModOneTileEntity;
+import net.minecraft.tileentity.TileEntity;
+import net.minecraft.world.World;
+
 public class BlockHealingStation extends BlockMO
 {
     public BlockHealingStation()
@@ -11,5 +15,10 @@ public class BlockHealingStation extends BlockMO
         this.setResistance(10.0f);
         this.setHardness(1.5f);
         this.setLightLevel(0.4f);
+    }
+
+    public TileEntity createTileEntity(World world, int metadata)
+    {
+        return new ModOneTileEntity();
     }
 }
