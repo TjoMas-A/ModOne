@@ -5,7 +5,8 @@ public class Names
     public static final class Blocks
     {
         public static final String HEAL = "healingStation";
-        public static final String NOVA = "novculite";
+        public static final String NOVA = "novaculite";
+        public static final String CHEST = "stoneChest";
     }
 
     public static final class Items
