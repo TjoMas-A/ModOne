@@ -1,26 +1,31 @@
 package com.tjomas_a.modone.tileentity;
 
 import com.tjomas_a.modone.network.PacketHandler;
-import com.tjomas_a.modone.network.message.MessageModOneTileEntity;
+import com.tjomas_a.modone.network.message.MessageMOTileEntity;
 import com.tjomas_a.modone.reference.Names;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.network.Packet;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraftforge.common.util.ForgeDirection;
 
-public class ModOneTileEntity extends TileEntity
+public class MOTileEntity extends TileEntity
 {
     protected ForgeDirection orientation;
     protected byte state;
     protected String customName;
     protected String owner;
 
-    public ModOneTileEntity()
+    public MOTileEntity(int metaData)
     {
         orientation = ForgeDirection.SOUTH;
         state = 0;
         customName = "";
         owner = "";
+    }
+
+    public MOTileEntity()
+    {
+
     }
 
     public ForgeDirection getOrientation()
@@ -126,6 +131,6 @@ public class ModOneTileEntity extends TileEntity
     @Override
     public Packet getDescriptionPacket()
     {
-        return PacketHandler.INSTANCE.getPacketFrom(new MessageModOneTileEntity(this));
+        return PacketHandler.INSTANCE.getPacketFrom(new MessageMOTileEntity(this));
     }
 }

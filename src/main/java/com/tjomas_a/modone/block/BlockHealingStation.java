@@ -2,7 +2,7 @@ package com.tjomas_a.modone.block;
 
 
 import com.tjomas_a.modone.reference.Names;
-import com.tjomas_a.modone.tileentity.ModOneTileEntity;
+import com.tjomas_a.modone.tileentity.MOTileEntity;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.World;
 
@@ -20,6 +20,6 @@ public class BlockHealingStation extends BlockMO
 
     public TileEntity createTileEntity(World world, int metadata)
     {
-        return new ModOneTileEntity();
+        return new MOTileEntity();
     }
 }

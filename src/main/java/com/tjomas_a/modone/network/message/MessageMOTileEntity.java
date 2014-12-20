@@ -1,6 +1,6 @@
 package com.tjomas_a.modone.network.message;
 
-import com.tjomas_a.modone.tileentity.ModOneTileEntity;
+import com.tjomas_a.modone.tileentity.MOTileEntity;
 import cpw.mods.fml.client.FMLClientHandler;
 import cpw.mods.fml.common.network.simpleimpl.IMessage;
 import cpw.mods.fml.common.network.simpleimpl.IMessageHandler;
@@ -8,25 +8,25 @@ import cpw.mods.fml.common.network.simpleimpl.MessageContext;
 import io.netty.buffer.ByteBuf;
 import net.minecraft.tileentity.TileEntity;
 
-public class MessageModOneTileEntity implements IMessage, IMessageHandler<MessageModOneTileEntity, IMessage>
+public class MessageMOTileEntity implements IMessage, IMessageHandler<MessageMOTileEntity, IMessage>
 {
     public int x, y, z;
     public byte orientation, state;
     public String customName, owner;
 
-    public MessageModOneTileEntity()
+    public MessageMOTileEntity()
     {
     }
 
-    public MessageModOneTileEntity(ModOneTileEntity modOneTileEntity)
+    public MessageMOTileEntity(MOTileEntity mOTileEntity)
     {
-        this.x = modOneTileEntity.xCoord;
-        this.y = modOneTileEntity.yCoord;
-        this.z = modOneTileEntity.zCoord;
-        this.orientation = (byte) modOneTileEntity.getOrientation().ordinal();
-        this.state = (byte) modOneTileEntity.getState();
-        this.customName = modOneTileEntity.getCustomName();
-        this.owner = modOneTileEntity.getOwner();
+        this.x = mOTileEntity.xCoord;
+        this.y = mOTileEntity.yCoord;
+        this.z = mOTileEntity.zCoord;
+        this.orientation = (byte) mOTileEntity.getOrientation().ordinal();
+        this.state = (byte) mOTileEntity.getState();
+        this.customName = mOTileEntity.getCustomName();
+        this.owner = mOTileEntity.getOwner();
     }
 
     @Override
@@ -58,16 +58,16 @@ public class MessageModOneTileEntity implements IMessage, IMessageHandler<Messag
     }
 
     @Override
-    public IMessage onMessage(MessageModOneTileEntity message, MessageContext ctx)
+    public IMessage onMessage(MessageMOTileEntity message, MessageContext ctx)
     {
         TileEntity tileEntity = FMLClientHandler.instance().getClient().theWorld.getTileEntity(message.x, message.y, message.z);
 
-        if (tileEntity instanceof ModOneTileEntity)
+        if (tileEntity instanceof MOTileEntity)
         {
-            ((ModOneTileEntity) tileEntity).setOrientation(message.orientation);
-            ((ModOneTileEntity) tileEntity).setState(message.state);
-            ((ModOneTileEntity) tileEntity).setCustomName(message.customName);
-            ((ModOneTileEntity) tileEntity).setOwner(message.owner);
+            ((MOTileEntity) tileEntity).setOrientation(message.orientation);
+            ((MOTileEntity) tileEntity).setState(message.state);
+            ((MOTileEntity) tileEntity).setCustomName(message.customName);
+            ((MOTileEntity) tileEntity).setOwner(message.owner);
         }
 
         return null;

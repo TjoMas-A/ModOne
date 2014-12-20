@@ -1,6 +1,6 @@
 package com.tjomas_a.modone.tileentity;
 
-public class HealingStationTileEntity extends ModOneTileEntity
+public class HealingStationTileEntity extends MOTileEntity
 {
 
 }
