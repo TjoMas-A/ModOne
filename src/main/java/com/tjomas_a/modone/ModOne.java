@@ -32,7 +32,6 @@ public class ModOne
         FMLCommonHandler.instance().bus().register(new ConfigurationHandler());
         ModItems.init();
         ModBlocks.init();
-
         LogHelper.info("Pre-Init Complete");
     }
 
