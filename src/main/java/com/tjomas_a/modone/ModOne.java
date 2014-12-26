@@ -4,6 +4,8 @@ import com.tjomas_a.modone.handler.ConfigurationHandler;
 import com.tjomas_a.modone.init.ModBlocks;
 import com.tjomas_a.modone.init.ModItems;
 import com.tjomas_a.modone.init.Recipes;
+import com.tjomas_a.modone.init.TileEntities;
+import com.tjomas_a.modone.network.PacketHandler;
 import com.tjomas_a.modone.proxy.IProxy;
 import com.tjomas_a.modone.reference.Reference;
 import com.tjomas_a.modone.utility.LogHelper;
@@ -32,6 +34,7 @@ public class ModOne
         FMLCommonHandler.instance().bus().register(new ConfigurationHandler());
         ModItems.init();
         ModBlocks.init();
+        PacketHandler.init();
         LogHelper.info("Pre-Init Complete");
     }
 
@@ -39,8 +42,9 @@ public class ModOne
     public void init(FMLInitializationEvent event)
     {
         Recipes.init();
-        LogHelper.info("Init Complete");
+        TileEntities.init();
         GameRegistry.registerWorldGenerator(new WorldGenNova(ModBlocks.novaculite, 32, ConfigurationHandler.novaculiteAmount), 1000);
+        LogHelper.info("Init Complete");
     }
 
     @Mod.EventHandler

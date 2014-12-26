@@ -31,13 +31,7 @@ public class BlockStoneChest extends BlockMO implements ITileEntityProvider
     @Override
     public TileEntity createNewTileEntity(World world, int metaData)
     {
-        if (metaData == 0)
-        {
-            return new StoneChestTileEntity();
-        }
-
-        return null;
-
+        return new StoneChestTileEntity(metaData = 0);
     }
 
     @Override
@@ -94,7 +88,7 @@ public class BlockStoneChest extends BlockMO implements ITileEntityProvider
     @SideOnly(Side.CLIENT)
     public void getSubBlocks(Item item, CreativeTabs creativeTabs, List list)
     {
-        for (int meta = 0; meta < 3; meta++)
+        for (int meta = 0; meta < 1; meta++)
         {
             list.add(new ItemStack(item, 1, meta));
         }

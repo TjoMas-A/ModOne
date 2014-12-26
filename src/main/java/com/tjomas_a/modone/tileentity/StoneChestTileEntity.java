@@ -48,12 +48,6 @@ public class StoneChestTileEntity extends MOTileEntity implements IInventory
             inventory = new ItemStack[ContainerStoneChest.STONE_CHEST_INVENTORY_SIZE];
         }
     }
-
-    public StoneChestTileEntity()
-    {
-
-    }
-
     @Override
     public void readFromNBT(NBTTagCompound nbtTagCompound)
     {
