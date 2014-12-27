@@ -15,12 +15,17 @@ public class MOTileEntity extends TileEntity
     protected String customName;
     protected String owner;
 
-    public MOTileEntity()
+    public MOTileEntity(int metaData)
     {
         orientation = ForgeDirection.SOUTH;
         state = 0;
         customName = "";
         owner = "";
+    }
+
+    public MOTileEntity()
+    {
+
     }
 
     public ForgeDirection getOrientation()
