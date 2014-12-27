@@ -1,0 +1,17 @@
+# Item Localisation
+
+item.modone:flag.name=Flag
+
+# Block Localisation
+
+tile.modone:healingStation.name=Healing Station
+tile.modone:novaculite.name=Novaculite
+tile.modone:stoneChest.name=Stone Chest
+
+# Containers
+
+container.modone:stoneChest=Stone Chest
+
+# Misc
+
+itemGroup.modone=Mod One

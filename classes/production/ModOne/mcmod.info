@@ -1,0 +1,22 @@
+
+[
+{
+  "modid": "ModOne",
+  "name": "Mod One",
+  "description": "My third attempt at following Pahimar's Let's Mod Reboot series. (Because I gave up the first 2 times). Also, I borrowed code from Chisel, so thanks to Pokefenn for writing that.",
+  "version": "1.0",
+  "mcversion": "1.7.10",
+  "url": "",
+  "updateUrl": "",
+  "authorList": [
+    "TjoMas_A"
+  ],
+  "credits": "Anyone who supported me.",
+  "logoFile": "",
+  "screenshots": [
+  ],
+  "parent":"",
+  "dependencies": [
+  ]
+}
+]
