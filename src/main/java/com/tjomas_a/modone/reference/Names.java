@@ -7,6 +7,7 @@ public class Names
         public static final String HEAL = "healingStation";
         public static final String NOVA = "novaculite";
         public static final String CHEST = "stoneChest";
+        public static final String NOVA_TILE = "novaculiteTile";
     }
 
     public static final class Items
